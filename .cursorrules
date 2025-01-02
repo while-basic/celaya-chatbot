@@ -82,6 +82,41 @@
         "ignoreNonDom": false,
         "allowInvalidRoles": ["none", "text"]
       }
+    },
+    "nextjs": {
+      "clientComponents": {
+        "directive": "'use client'",
+        "location": "top",
+        "required": true
+      },
+      "hydration": {
+        "preventMismatch": {
+          "dateHandling": "useEffect",
+          "windowChecks": "useEffect",
+          "randomValues": "useEffect",
+          "dynamicClassNames": "warn"
+        },
+        "suppressWarning": {
+          "enabled": false,
+          "message": "suppressHydrationWarning should only be used when necessary"
+        }
+      },
+      "serverComponents": {
+        "defaultServer": true,
+        "asyncComponents": "preferred"
+      }
+    },
+    "react": {
+      "hooks": {
+        "dependencies": "error",
+        "exhaustiveDeps": "warn",
+        "rulesOfHooks": "error"
+      },
+      "performance": {
+        "useMemo": "recommended",
+        "useCallback": "recommended",
+        "reactMemo": "selective"
+      }
     }
   }
 } 

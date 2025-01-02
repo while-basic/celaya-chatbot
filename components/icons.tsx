@@ -410,7 +410,7 @@ export const PencilEditIcon = ({ size = 16 }: { size?: number }) => {
       <path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M11.75 0.189331L12.2803 0.719661L15.2803 3.71966L15.8107 4.24999L15.2803 4.78032L5.15901 14.9016C4.45575 15.6049 3.50192 16 2.50736 16H0.75H0V15.25V13.4926C0 12.4981 0.395088 11.5442 1.09835 10.841L11.2197 0.719661L11.75 0.189331ZM11.75 2.31065L9.81066 4.24999L11.75 6.18933L13.6893 4.24999L11.75 2.31065ZM2.15901 11.9016L8.75 5.31065L10.6893 7.24999L4.09835 13.841C3.67639 14.2629 3.1041 14.5 2.50736 14.5H1.5V13.4926C1.5 12.8959 1.73705 12.3236 2.15901 11.9016ZM9 16H16V14.5H9V16Z"
+        d="M11.75 0.189331L12.2803 0.719661L15.2803 3.71966L15.8107 4.24999L15.2803 4.78032L13.7374 6.32322C13.1911 6.8696 12.3733 6.97916 11.718 6.65188L9.54863 10.5568C8.71088 12.0648 7.12143 13 5.39639 13H0.75H0V12.25V10.4926C0 9.4981 0.395088 8.5442 1.09835 7.841L11.2197 0.719661L11.75 0.189331ZM11.75 2.31065L9.81066 4.24999L11.75 6.18933L13.6893 4.24999L11.75 2.31065ZM2.15901 11.9016L8.75 5.31065L10.6893 7.24999L4.09835 13.841C3.67639 14.2629 3.1041 14.5 2.50736 14.5H1.5V13.4926C1.5 12.8959 1.73705 12.3236 2.15901 11.9016ZM9 16H16V14.5H9V16Z"
         fill="currentColor"
       />
     </svg>
@@ -746,22 +746,27 @@ export const SidebarLeftIcon = ({ size = 16 }: { size?: number }) => (
   </svg>
 );
 
-export const PlusIcon = ({ size = 16 }: { size?: number }) => (
-  <svg
-    height={size}
-    strokeLinejoin="round"
-    viewBox="0 0 16 16"
-    width={size}
-    style={{ color: 'currentcolor' }}
-  >
-    <path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M8.75 1.75V1H7.25V1.75V6.75H2.25H1.5V8.25H2.25H7.25V13.25V14H8.75V13.25V8.25H13.75H14.5V6.75H13.75H8.75V1.75Z"
-      fill="currentColor"
-    />
-  </svg>
-);
+export const PlusIcon = ({ size = 16 }: { size?: number }) => {
+  // Return a stable JSX structure wrapped in a fragment to ensure consistent rendering
+  return (
+    <>
+      <svg
+        height={size}
+        width={size}
+        viewBox="0 0 16 16"
+        strokeLinejoin="round"
+        style={{ color: 'currentcolor' }}
+      >
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M8 1.5a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5a.5.5 0 0 1 .5-.5z"
+          fill="currentColor"
+        />
+      </svg>
+    </>
+  );
+};
 
 export const CopyIcon = ({ size = 16 }: { size?: number }) => (
   <svg
